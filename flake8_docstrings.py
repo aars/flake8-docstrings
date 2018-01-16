@@ -19,6 +19,11 @@ __all__ = ('pep257Checker',)
 
 stdin.monkey_patch('pycodestyle')
 
+pep257.checker.ConventionChecker.SECTION_NAMES += [
+    'Design Specification',
+    'Test Specification'
+]
+
 
 class EnvironError(pep257.Error):
 
